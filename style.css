@@ -1,0 +1,259 @@
+body{
+    margin: 0%;
+    padding: 0%;
+}
+/* Navbar Styles */
+.container{
+    width: 1135px;
+    padding-left: .75rem;
+    padding-right: .75rem;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 111px;
+}
+.nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.nav-logo img{
+    width: 50px; 
+    height: 60px;
+    
+     
+}
+.nav-list ul{
+    display: flex;
+    justify-content: space-evenly;
+}
+.nav-list ul li{
+    list-style: none;
+    margin-left: 24px;
+    margin-right: 16px;
+}
+.nav-list ul li a{
+    text-decoration: none;
+    color: #22262A;
+   
+}
+.nav-icon .fas,.nav-icon .far{
+    color: #22262A;
+    margin-left: 16px;
+} 
+.nav-icon .fa-bars{
+    font-size: 30px;
+    display: none;
+}
+.nav-list ul li::after{
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: #f44336;
+    display: block;
+    margin: auto;
+    transition: .5s;
+    box-sizing: border-box;
+
+}
+.nav-list ul li:hover::after{
+    width: 100%;
+    
+}
+/* Highlight Styles */
+.highlight-container{
+    height: 745px;
+    background-image: url(images/fashion-header.jpg); 
+}
+.highlight{
+    
+    padding-left: 900px;
+    padding-top: 404px;
+}
+.highlight h4,p,button{
+    font-size: 18px;
+    margin: 0%;
+}
+.highlight p{
+    margin-bottom: 20px;
+}
+.highlight h1{
+    font-size: 80px;
+    font-weight: 700;
+    margin: 0%;
+}
+.btn{
+    background-color: #22262A;
+    border: none;
+    padding: 0%;
+    margin-right: 30px;
+}
+.btn a{
+    text-decoration: none;
+    color: white;
+    padding: 4px 24px;
+}
+/* Category Styles */
+.category{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap:30px;
+    margin-top: 141px;
+}
+.flex-box{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 23px;
+}
+.grid-item img{
+    width: 100%;
+    height: 100%;
+}
+/* WOMEN’S FASHION */
+.women-box{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-column-gap: 22px;
+    margin-top: 72px;
+}
+.girl-head{
+    text-align: center;
+}
+.girl-img h4,p,span{
+    font-size: 15px;
+    margin-bottom: 3px;
+}
+.girl-img .price{
+    display: inline-block;
+    margin-left: 30px;
+    color: #CF2929;
+}
+/* Hightlight Styles */
+.highlight-2-container{
+    height: 745px;
+    background-image: url(images/bg-2.jpg);
+}
+.highlight-2{
+    padding-left: 230px;
+    padding-top: 434px;
+}
+.highlight-2 h4,p,button{
+    font-size: 18px;
+    margin: 0%;
+}
+.highlight-2 p{
+    margin-bottom: 20px;
+}
+.highlight-2 h1{
+    font-size: 80px;
+    font-weight: 700;
+    margin: 0%;
+}
+.contact-container{
+    background-color: #F2F8FC;
+}
+.contact-info{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-column-gap: 196px;
+    margin-left: 230px;
+    margin-right: 230px;
+    margin-top: 115px;
+}
+.contact-info img{
+    width: 100px; 
+    height: 120px;
+}
+.contact-box p{
+    margin-top: 17px;
+    margin-bottom: 41px;
+}
+.contact-box .fas{
+    margin-right: 26px;
+}
+.contact-box .fab{
+    color: black;
+    margin-right: 15px;
+}
+.subscribe input{
+    width: 450px;
+    margin-top: 5px;
+}
+.support{
+    display: flex;
+    margin-top: 54px;
+
+}
+.support>ul{
+    padding-left: 0%;
+    padding-right: 88px;
+}
+.support li{
+    list-style: none;
+    margin-bottom: 16px;
+}
+.support li a{
+    text-decoration: none;
+    color: #22262A;
+    font-size: 15px;
+}
+.support .help{
+    width: 173px;
+}
+.support .about{
+    width: 107px;
+}
+/* Footer Styles */
+footer{
+    background-color: #E7F5F8;
+}
+footer p{
+    font-size: 15px;
+    text-align: center;
+    padding: 35px 0;
+}
+
+
+/* Media Queries */
+/* Mobile Device */
+@media only screen and (max-width:540px) {
+    .container{
+        width: 100%;
+        padding-left: 0%;
+        padding-right: 0%;
+    }
+    .nav-logo img{
+        width: 70px;
+    }
+    .nav-list ul{
+        display: block;
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background-color: #2c3e50;
+        top: 50px;
+        left: -100%;
+        text-align: center;
+        transition: all .5s;
+    }
+    .nav-list ul li{
+        display: block;
+    }
+    .nav-list ul li a{
+        font-size: 10px;
+    }
+    .nav-icon .icon,.highlight-container,.highlight-2-container{
+        display: none;
+    }
+    #search{
+        display: none;
+    }
+    .nav-icon .fa-bars{
+        display: block;
+    }
+    .nav-icon .fa-bars:focus+.nav-list ul{
+        left: 0%;
+    }
+
+
+
+}
